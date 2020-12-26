@@ -46,9 +46,9 @@
         },
         data() {
             return {
-                manNum: 2,
-                womanNum: 2,
-                childNum: 2,
+                manNum: 1,
+                womanNum: 1,
+                childNum: 1,
             }
         },
         computed: {
@@ -71,7 +71,7 @@
                 } else if (e === 'child') {
                     this.childNum > 0 ? this.childNum-- : ''
                 }
-                this.$emit('handelSub', this.manNum, this.womanNum,this.childNum,)
+                this.$emit('handelSub',e, this.manNum, this.womanNum,this.childNum,)
             },
             handelAdd(e) {
                 if (e === 'man') {
@@ -81,7 +81,7 @@
                 } else if (e === 'child') {
                     this.childNum++
                 }
-                this.$emit('handelAdd', this.manNum, this.womanNum,this.childNum,)
+                this.$emit('handelAdd', e,this.manNum, this.womanNum,this.childNum,)
             },
 
         }
